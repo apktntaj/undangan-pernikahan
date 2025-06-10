@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import { Heart, Calendar, MapPin, Gift, Clock, ChevronDown } from 'lucide-react';
+import {useParams} from 'react-router-dom';
 
 function App() {
   const [showContent, setShowContent] = useState(false);
   const weddingDate = new Date('2025-06-12T08:00:00');
+  const tamuUndangan = useParams().tamuUndangan || 'Tamu Undangan';
+  document.title = `Undangan Pernikahan ${tamuUndangan}`;
+  document.documentElement.lang = 'id';
 
   const calculateTimeLeft = () => {
     const difference = +weddingDate - +new Date();
@@ -31,8 +35,8 @@ function App() {
       <section className="h-screen flex flex-col items-center justify-center relative text-center px-4">
         <div className="space-y-6 animate-fade-in">
           <Heart className="w-16 h-16 text-rose-400 mx-auto animate-pulse" />
-          <h1 className="font-serif text-4xl md:text-6xl text-gray-800">Pria & Wanita</h1>
-          <p className="text-gray-600">Kami mengundang Anda untuk merayakan hari bahagia kami</p>
+          <h1 className="font-serif text-4xl md:text-6xl text-gray-800">Fatimah & Alam</h1>
+          <p className="text-gray-600">{`Kami mengundang ${tamuUndangan.split("-").join(" ")} untuk merayakan hari bahagia kami`}</p>
           <p className="font-serif text-2xl text-gray-700">12 Juni 2025</p>
           <div className="grid grid-cols-4 gap-4 max-w-md mx-auto">
             <div className="bg-white p-3 rounded-lg shadow-md">
