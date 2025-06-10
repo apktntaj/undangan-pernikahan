@@ -5,7 +5,7 @@ import {useParams} from 'react-router-dom';
 function App() {
   const [showContent, setShowContent] = useState(false);
   const weddingDate = new Date('2025-06-12T08:00:00');
-  const tamuUndangan = useParams().tamuUndangan || 'Tamu Undangan';
+  const tamuUndangan = useParams().tamuUndangan || 'Farahdiba Mallombassang';
   document.title = `Undangan Pernikahan ${tamuUndangan}`;
   document.documentElement.lang = 'id';
 
