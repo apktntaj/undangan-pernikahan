@@ -5,7 +5,7 @@ import {useParams} from 'react-router-dom';
 function App() {
   const [showContent, setShowContent] = useState(false);
   const weddingDate = new Date('2025-06-12T08:00:00');
-  const tamuUndangan = useParams().tamuUndangan || 'Farahdiba Mallombassang';
+  const tamuUndangan = useParams().tamuUndangan || 'Ilham';
   document.title = `Undangan Pernikahan ${tamuUndangan}`;
   document.documentElement.lang = 'id';
 
@@ -83,7 +83,7 @@ function App() {
                       <div className="ml-6 md:ml-0 md:flex md:items-center">
                         <div className="md:w-1/2 md:pr-8 text-right hidden md:block">
                           <h3 className="font-serif text-xl text-gray-800">Pertama Bertemu</h3>
-                          <p className="text-gray-600">Januari 2025</p>
+                          <p className="text-gray-600">Maret 2021</p>
                         </div>
                         <div className="absolute left-0 md:left-1/2 mt-3 md:mt-0 -ml-3 md:-ml-3">
                           <div className="w-6 h-6 bg-rose-400 rounded-full"></div>
@@ -106,7 +106,7 @@ function App() {
                         </div>
                         <div className="md:w-1/2 md:pl-8">
                           <h3 className="font-serif text-xl text-gray-800 md:hidden">Mulai Menjalin Hubungan</h3>
-                          <p className="text-gray-600 md:hidden">Januari 2025</p>
+                          <p className="text-gray-600 md:hidden">Juni 2021</p>
                           <p className="text-gray-600 mt-2">Setelah saling mengenal lebih dalam, kami memutuskan untuk menjalin hubungan yang lebih serius.</p>
                         </div>
                       </div>
@@ -212,7 +212,7 @@ function App() {
                   <div className="space-y-2 text-gray-600">
                     <p className="flex items-center justify-center gap-2">
                       <Calendar className="w-5 h-5" />
-                      Sabtu, 20 Desember 2025
+                      Jumat, 23 Desember 2025
                     </p>
                     <p className="flex items-center justify-center gap-2">
                       <Clock className="w-5 h-5" />
@@ -307,7 +307,7 @@ function App() {
           <footer className="py-8 px-4 bg-rose-50 text-center text-gray-600">
             <div className="max-w-xl mx-auto space-y-4">
               <Heart className="w-8 h-8 text-rose-400 mx-auto" />
-              <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kami</p>
+              <p>{`Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i ${tamuUndangan} berkenan hadir untuk memberikan doa restu kepada kami`}</p>
               <p className="font-serif text-xl text-gray-800 mt-4">Fatimah & Alam</p>
             </div>
           </footer>
